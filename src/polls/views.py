@@ -1,5 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .form import UploadFileForm
 
 def index(request):
-    return render(request, 'home/home.html')
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST)
+    
+    form = UploadFileForm()
+    return render(request, 'home/home.html', {'form':form})
