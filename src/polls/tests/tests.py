@@ -7,7 +7,7 @@ c = Client()
 response = c.post('/')
 print(response.status_code)
 
-f = 'C:/Users/alefg/projects/webExcel/xlsTest.xlsx'
+f = 'C:/Users/alefg/projects/webExcel/src/polls/tests/xlsTest.xlsx'
 file = {'fileXls': f }
 xls = pd.read_excel(f)
 print(xls.head())
